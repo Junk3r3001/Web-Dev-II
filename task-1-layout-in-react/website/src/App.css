@@ -1,0 +1,525 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Protest+Guerrilla&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9e9e9;
+  color: #111;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: none;
+  text-align: initial;
+  display: block;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+.site-header {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 25px 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.site-header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.site-header nav a,
+.site-footer nav a {
+  color: #111;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.site-header nav a:hover,
+.site-footer nav a:hover {
+  opacity: 0.6;
+}
+
+
+
+main {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+.article {
+  width: 100%;
+  background: #fff;
+}
+
+.article-intro {
+  padding: 35px 40px 35px;
+}
+
+.article-intro h1,
+.article-intro h2,
+.story-columns h3,
+.author-text h3,
+.comments-section h3 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-weight: 400;
+}
+
+.article-intro h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  color: #111;
+  margin: 0 0 5px;
+}
+
+.article-intro h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 22px;
+}
+
+.article-intro p {
+  max-width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+
+.story-columns {
+  padding: 15px 40px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.story-columns h3 {
+  font-size: 30px;
+  line-height: 1.3;
+  color: #111;
+  margin: 0 0 14px;
+}
+
+.story-columns p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #222;
+  margin: 0 0 18px;
+}
+
+
+.album-gallery {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.album-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.album-gallery .featured-album {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.author-section {
+  width: 100%;
+  padding: 35px 55px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px 50px;
+  gap: 25px;
+  align-items: center;
+}
+
+.author-text {
+  text-align: center;
+}
+
+.author-text h3 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.author-text p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.author-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.social-links img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.comments-section {
+  width: 100%;
+  padding: 35px 40px 45px;
+  background: #d3d3d3;
+  border-top: 1px solid #111;
+}
+
+.comments-section h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.comment {
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.comment h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.comment p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #222;
+}
+
+
+
+.site-footer {
+  width: 100%;
+  min-height: 200px;
+  padding: 35px 20px;
+  background: #14181d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.site-footer nav {
+  width: 100%;
+  max-width: 1126px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.site-footer nav a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.site-footer p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-socials img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 25px 20px 40px;
+  }
+
+  .site-header nav {
+    gap: 20px;
+  }
+
+  .article-intro {
+    padding: 30px 25px;
+  }
+
+  .article-intro h1 {
+    font-size: 48px;
+  }
+
+  .article-intro h2 {
+    font-size: 27px;
+  }
+
+  .article-intro p {
+    font-size: 18px;
+  }
+
+  .story-columns {
+    padding: 15px 25px 35px;
+    gap: 18px;
+  }
+
+  .story-columns h3 {
+    font-size: 25px;
+  }
+
+  .story-columns p {
+    font-size: 14px;
+  }
+
+  .author-section {
+    padding: 30px 25px;
+    grid-template-columns: minmax(0, 1fr) 200px 50px;
+    gap: 15px;
+  }
+}
+
+
+
+@media (max-width: 520px) {
+
+  .site-header {
+    padding: 20px 15px 35px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .site-header nav {
+    gap: 12px;
+  }
+
+  .site-header nav a {
+    font-size: 13px;
+  }
+
+  .article-intro {
+    padding: 25px 20px;
+  }
+
+  .article-intro h1 {
+    font-size: 38px;
+  }
+
+  .article-intro h2 {
+    font-size: 22px;
+  }
+
+  .article-intro p {
+    font-size: 17px;
+  }
+
+  .story-columns {
+    grid-template-columns: 1fr;
+    padding: 15px 20px 30px;
+    gap: 20px;
+  }
+
+  .story-columns h3 {
+    font-size: 25px;
+  }
+
+  .story-columns p {
+    font-size: 15px;
+  }
+
+  .album-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    aspect-ratio: auto;
+  }
+
+  .album-gallery .featured-album {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .album-gallery img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .author-section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 30px 20px;
+  }
+
+  .author-text {
+    order: 1;
+  }
+
+  .author-photo {
+    order: 2;
+  }
+
+  .social-links {
+    order: 3;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .comments-section {
+    padding: 25px 20px;
+  }
+
+  .site-footer {
+    padding: 30px 15px;
+  }
+
+  .site-footer nav {
+    gap: 12px;
+  }
+
+  .site-footer nav a {
+    font-size: 12px;
+  }
+}
+
+.x-social {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.x-social svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.social-links a.x-social {
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  background: #000 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+.footer-socials img:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #000;
+  border-radius: 50%;
+  object-fit: contain;
+  filter: none;
+}
